@@ -62,13 +62,13 @@ source install/setup.bash
 export GZ_SIM_RESOURCE_PATH=$GZ_SIM_RESOURCE_PATH:\
 $(pwd)/src/rs750/rs750_gazebo/models:\
 $(pwd)/src/rs750/rs750_gazebo/worlds:\
-$(pwd)/src/asv_wave_sim/gz-waves-models/models
-$(pwd)/src/asv_wave_sim/gz-waves-models/world_models
+$(pwd)/src/asv_wave_sim/gz-waves-models/models:\
+$(pwd)/src/asv_wave_sim/gz-waves-models/world_models:\
 $(pwd)/src/asv_wave_sim/gz-waves-models/worlds
 
 # Add libraries to the plugin path
 export GZ_SIM_SYSTEM_PLUGIN_PATH=$GZ_SIM_SYSTEM_PLUGIN_PATH:\
-$(pwd)/install/lib
+$(pwd)/install/lib:\
 $(pwd)/src/ardupilot_gazebo/build
 
 # Check the Gazebo environment variables
